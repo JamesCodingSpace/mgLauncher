@@ -1,0 +1,2 @@
+# mgLauncher
+PythonProject: MiniGame Launcher

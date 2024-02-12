@@ -95,6 +95,12 @@ added "main.py" (now main_v1.py)
 
 v0.1
 added readme.md file
+
+****
+## Update schedule
+
+v1.1.1 -> 15.02.2024
+v1.2 -> 25.02.2024
 ****
 ## Credits
 Created for programming class at *DHBW Bad Mergentheim*

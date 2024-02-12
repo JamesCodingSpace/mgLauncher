@@ -100,6 +100,7 @@ added readme.md file
 ## Update schedule
 
 v1.1.1 -> 15.02.2024
+
 v1.2 -> 25.02.2024
 ****
 ## Credits

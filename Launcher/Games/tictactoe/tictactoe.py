@@ -1,21 +1,17 @@
 import pygame
 import random
 
-# Initialisierung von Pygame
 pygame.init()
 
-# Fenstergröße und Titel
 WIDTH, HEIGHT = 300, 350
 TITLE = "Tic Tac Toe"
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption(TITLE)
 
-# Farben
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GRAY = (200, 200, 200)
 
-# Spielvariablen
 FPS = 60
 CELL_SIZE = WIDTH // 3
 board = [[" " for _ in range(3)] for _ in range(3)]
@@ -23,17 +19,13 @@ current_player = "X"
 game_over = False
 mode = None
 
-# Funktion zum Zeichnen des Spielfelds
 def draw_board():
     WIN.fill(WHITE)
-    # Zeichne horizontale Linien
     for i in range(1, 3):
         pygame.draw.line(WIN, BLACK, (0, i * CELL_SIZE), (WIDTH, i * CELL_SIZE), 3)
-    # Zeichne vertikale Linien
     for i in range(1, 3):
         pygame.draw.line(WIN, BLACK, (i * CELL_SIZE, 0), (i * CELL_SIZE, HEIGHT - 50), 3)
 
-# Funktion zum Zeichnen der Spielsteine
 def draw_symbols():
     for row in range(3):
         for col in range(3):
@@ -44,29 +36,24 @@ def draw_symbols():
                 text_rect = text.get_rect(center=(col * CELL_SIZE + CELL_SIZE // 2, row * CELL_SIZE + CELL_SIZE // 2))
                 WIN.blit(text, text_rect)
 
-# Funktion zum Überprüfen auf Gewinner
 def check_winner(board, player):
-    # Überprüfe horizontale und vertikale Linien
     for i in range(3):
         if board[i][0] == board[i][1] == board[i][2] == player:
             return True
         if board[0][i] == board[1][i] == board[2][i] == player:
             return True
-    # Überprüfe diagonale Linien
     if board[0][0] == board[1][1] == board[2][2] == player:
         return True
     if board[0][2] == board[1][1] == board[2][0] == player:
         return True
     return False
 
-# Funktion zum Überprüfen auf Unentschieden
 def check_draw(board):
     for row in board:
         if " " in row:
             return False
     return True
 
-# Funktion zum setzen eines Zuges für den Computer (Minimax Algorithmus)
 def computer_move():
     best_score = float("-inf")
     best_move = None
@@ -110,7 +97,6 @@ def minimax(board, maximizing):
                     best_score = min(score, best_score)
         return best_score
 
-# Funktion zur Auswahl des Spielmodus
 def choose_mode():
     global mode
     font = pygame.font.SysFont(None, 40)
@@ -136,7 +122,6 @@ def choose_mode():
 
 choose_mode()
 
-# Hauptspiel-Schleife
 clock = pygame.time.Clock()
 running = True
 winner = None

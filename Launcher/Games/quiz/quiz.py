@@ -33,7 +33,10 @@ class QuizApp(tk.Tk):
         self.geometry("400x200")
         
         self.label = tk.Label(self, text="Willkommen zum Quiz!")
+        self.label.config(font=("bold"))
+        self.label2 = tk.Label(self, text="Du hast für jede Frage 30 Sekunden Zeit zu antworten, \nansonsten zählt die Antwort automatisch als falsch! \nHinweis: Gebe bei Fragen nach einer Zahl \n als Antwort die Zahl und nicht das Zahlenwort.")
         self.label.pack()
+        self.label2.pack()
         
         self.button = tk.Button(self, text="Start Quiz", command=self.start_quiz)
         self.button.pack()

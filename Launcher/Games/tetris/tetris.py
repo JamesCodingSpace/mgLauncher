@@ -1,7 +1,6 @@
 import pygame
 import random
 
-# Konstanten für das Spielfeld
 SCREEN_WIDTH = 300
 SCREEN_HEIGHT = 600
 BLOCK_SIZE = 30
@@ -11,7 +10,6 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 COLORS = [(0, 255, 255), (255, 0, 255), (255, 255, 0), (0, 255, 0), (255, 165, 0), (255, 0, 0), (0, 0, 255)]
 
-# Definition der Tetriminos
 tetriminos = [
     [[1, 1, 1, 1]],  # I
     [[1, 1, 1], [0, 1, 0]],  # T

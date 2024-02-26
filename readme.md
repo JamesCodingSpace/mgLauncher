@@ -1,3 +1,9 @@
+Matrikelnummern
+- 6575277
+- 6564425
+- 7557437
+
+
 # MiniGame Launcher
 A Python-Project by **Alex**, **Jonas** and **Jamie**
 _v 1.2_

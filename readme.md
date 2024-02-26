@@ -1,6 +1,6 @@
 # MiniGame Launcher
 A Python-Project by **Alex**, **Jonas** and **Jamie**
-_v 1.1_
+_v 1.2_
 
 ## Explanation
 In the ever-expanding world of gaming, convenience and accessibility have become paramount for enthusiasts of all levels. 
@@ -31,7 +31,6 @@ Getting started with the Mini Game Launcher is a breeze:
 ****
 ## Know Issues
 Tetris Tiles will crash the Game on colission with walls
--> working on for v1.1.1 (hotfix)
 
 ****
 ## Changelog
